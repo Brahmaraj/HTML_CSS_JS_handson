@@ -28,3 +28,11 @@ printName.apply(name2, arr);
 let newPrintName = printName.myBind(nameobj);
 newPrintName(...arr, "India");
 
+// var person1 = {firstname:"Brahma",lastname:"rathod"};
+// var person2 = {firstname:"junaid",lastname:"shaik"};
+// function fullName(){
+//     console.log(this.firstname + this.lastname);
+// }
+
+// var bindfunc = fullName.bind(person1);//first arg - this then args
+// bindfunc();
