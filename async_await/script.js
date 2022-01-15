@@ -112,4 +112,12 @@ const slowpromise = new Promise(resolve=>{
   },5000);
 })
 
-Promise.race([fastpromise,slowpromise]).then(val=>console.log(val));
+// Promise.all([slowpromise,fastpromise]).then(val=>console.log(val[0],val[1]));
+
+async function concurrent(){
+  let slowvar = await slow();
+  let fastvar = await fast();
+  console.log(slowvar)
+  console.log(fastvar);
+}
+concurrent()
