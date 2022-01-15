@@ -39,7 +39,7 @@
 
 // **********************************************************************************************************
 
-// Write promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+//  , in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
 
 // Numbers
 // 1
@@ -50,33 +50,46 @@
 // 6
 // 7
 
-// let operation = new Promise((resolve,reject)=>{
-//     resolve(value);
-//     re
-// });
-// function value(){
-//     let a = 0;
-//     a++;
-//     return setTimeout(console.log(a),a+0000);
-    
-// }
-// operation.then((val)=> {
-//     val();
-//     return val;
-// }).then((val)=> {
-//     val();
-//     return val;
-// }).then((val)=>{
-//     val();
-//     return val;
-// })
-// **************
-var obj1 = {
-    name:"Brahma",
-    age:21,
-    gender:"male"
+
+let operation = new Promise((resolve,reject)=>{
+    resolve(value());
+});
+
+function value(){
+    return function(a){
+        setTimeout(() => {
+           console.log(a) 
+        }, Number(a+'000'));
+    }; 
 }
+operation.then((func)=> {
+    func(1);
+    return func;
+}).then((val)=> {
+    val(2);
+    return val;
+}).then((val)=>{
+    val(3);
+    return val;
+}).then((val)=>{
+    val(4);
+    return val;
+}).then((val)=>{
+    val(5);
+    return val;
+}).then((val)=>{
+    val(6);
+    return val;
+}).then((val)=>{
+    val(7);
+})
+// **************
+// var obj1 = {
+//     name:"Brahma",
+//     age:21,
+//     gender:"male"
+// }
 
-var savedobj = JSON.stringify(obj1)
+// var savedobj = JSON.stringify(obj1)
 
-window.localStorage.setItem("object",savedobj);
+// window.localStorage.setItem("object",savedobj);
