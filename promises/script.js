@@ -39,7 +39,7 @@
 
 // **********************************************************************************************************
 
-//  , in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+//  in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
 
 // Numbers
 // 1
@@ -50,20 +50,22 @@
 // 6
 // 7
 
-
 let operation = new Promise((resolve,reject)=>{
-    resolve(value());
+        let a=1;  
+        setTimeout(() => {
+            resolve(console.log(a))
+        }, Number(a+'000'));
 });
 
-function value(){
-    return function(a){
-        setTimeout(() => {
-           console.log(a) 
-        }, Number(a+'000'));
-    }; 
-}
+// function value(){
+    // return function(a){
+    //     setTimeout(() => {
+    //         console.log(a) 
+    //     }, Number(a+'000'));
+    // }; 
+// }
 operation.then((func)=> {
-    func(1);
+    //func(1)
     return func;
 }).then((val)=> {
     val(2);
