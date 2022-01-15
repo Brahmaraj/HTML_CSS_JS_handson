@@ -91,3 +91,5 @@ function throttle(func,limit){
         }
     }
 }
+
+// new Worker(console.table(["apple","banana","kiwi"]));
