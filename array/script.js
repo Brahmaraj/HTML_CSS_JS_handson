@@ -43,4 +43,5 @@ console.log(array.join(" - "))//simiar to toString but separates with what we pr
 
 console.log(array)
 console.log(array.some((ele)=>ele=='second'));//return boolean true if any one element satisfies the condition if no element satisfies the condition then returns false
-console.log([5,6,7,8,8].every((ele)=>ele>5));//returns boolean value true if all elements satisfies the condition and false if any one fails to satisfy the condition
+console.log([5,6,7,8,8].every((ele)=>ele>5));//returns boolean value true if all elements satisfies the condition and false if any one fails to satisfy the condition 
+
